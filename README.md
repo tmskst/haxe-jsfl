@@ -38,8 +38,8 @@ jsfl.Flash#trace() を使用します。
 
 ### ライブラリ項目を走査して項目名を出力する
 
-  var flash:Flash = untyped fl;
+	var flash:Flash = untyped fl;
 	var items:Array<Item> = flash.getDocumentDOM().library.items;
 	for (item in items) {
-    flash.trace(item.name);
+		flash.trace(item.name);
 	}
