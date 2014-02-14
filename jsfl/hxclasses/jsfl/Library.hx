@@ -15,7 +15,7 @@ extern class Library {
 	public function duplicateItem(namePath:String):Bool;
 	
 	// 現在選択されているアイテムまたは指定されたアイテムを編集モードで開きます。
-	public function editItem(namePath:String):Bool;
+	public function editItem(?namePath:String = null):Bool;
 	
 	// ライブラリアイテムのインデックス値（ゼロから始まる）を返します。
 	public function findItemIndex(namePath:String):Int;

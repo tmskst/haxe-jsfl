@@ -19,10 +19,10 @@ extern class Document {
 	public function addNewLine(startpoint: { x:Int, y:Int }, endpoint: { x:Int, y:Int } ):Void;
 
 	// 指定した境界の矩形に新規の Oval オブジェクトを追加します。
-	public function addNewOval(boundingRectangle:Rectangle, ?bSuppressFill:Bool = false, ?bSuppressStroke:Bool = false):Void;
+	public function addNewOval(boundingRectangle:BoundingRectangle, ?bSuppressFill:Bool = false, ?bSuppressStroke:Bool = false):Void;
 
 	// 指定した範囲に合わせた新規の楕円プリミティブを追加します。
-	public function addNewPrimitiveOval(boundingRectangle:Rectangle, ?bSuppressFill:Bool = false, ?bSuppressStroke:Bool = false):Void;
+	public function addNewPrimitiveOval(boundingRectangle:BoundingRectangle, ?bSuppressFill:Bool = false, ?bSuppressStroke:Bool = false):Void;
 
 	// 指定した範囲に合わせた新規の矩形プリミティブを追加します。
 	public function addNewPrimitiveRectangle(rect:Rectangle, roundness:Int, ?bSuppressFill:Bool = false, ?bSuppressStroke:Bool = false):Void;
@@ -31,13 +31,13 @@ extern class Document {
 	public function addNewPublishProfile(?profileName:String = null):Int;
 
 	// 新規の矩形または角丸矩形を追加し、指定した範囲に合わせます。
-	public function addNewRectangle(boundingRectangle:Rectangle, roundness:Int, ?bSuppressFill:Bool = false, ?bSuppressStroke:Bool = false):Void;
+	public function addNewRectangle(boundingRectangle:BoundingRectangle, roundness:Int, ?bSuppressFill:Bool = false, ?bSuppressStroke:Bool = false):Void;
 
 	// 新規のシーン（Timeline オブジェクト）を、現在選択しているシーンの後の次のシーンとして追加し、新規に追加したシーンを現在選択しているシーンとして設定します。
 	public function addNewScene(name:String):Bool;
 
 	// 新規の空のテキストフィールドを挿入します。
-	public function addNewText(boundingRectangle:Rectangle, text:String):Void;
+	public function addNewText(boundingRectangle:BoundingRectangle, text:String):Void;
 
 	// 選択したオブジェクトを整列します。
 	public function align(alignmode:String):Void;
@@ -327,8 +327,9 @@ extern class Document {
 	// ツールパネル、プロパティインスペクターおよび選択したシェイプの線の設定を行います。
 	public function setCustomStroke(stroke:Stroke):Void;
 
+	/* APIでは引数'value'の型は整数としているが、setElementProperty('name', 'foobar') なども取り得る */
 	// ドキュメントで選択したオブジェクトの指定した Element プロパティを設定します。
-	public function setElementProperty(property:String, value:Int):Void;
+	public function setElementProperty(property:String, value:Dynamic):Void;
 
 	// 選択したテキストアイテムの指定した TextAttrs プロパティに指定値を設定します。
 	public function setElementTextAttr(attrName:String, attrValue:Dynamic, ?startIndex:Null<Int> = null, ?endIndex:Null<Int> = null):Bool;
@@ -370,7 +371,7 @@ extern class Document {
 	public function setRectangleObjectProperty(propertyName:String, value:Dynamic):Void;
 
 	// 選択したオブジェクトを、1 回の操作で移動しサイズ変更します。
-	public function setSelectionBounds(boundingRectangle:Rectangle, ?bContactSensitiveSelection:Bool = false):Void;
+	public function setSelectionBounds(boundingRectangle:BoundingRectangle, ?bContactSensitiveSelection:Bool = false):Void;
 
 	// ステージを基準にして、指定した座標で矩形の選択マーキーを描画します。
 	public function setSelectionRect(rect:Rectangle, ?bReplaceCurrentSelection:Bool = true, ?bContactSensitiveSelection:Bool = false):Void;
@@ -394,7 +395,7 @@ extern class Document {
 	public function setStrokeStyle(strokeType:String):Void;
 
 	// 選択したテキストアイテムの境界の矩形を指定したサイズに変更します。
-	public function setTextRectangle(boundingRectangle:Rectangle):Bool;
+	public function setTextRectangle(boundingRectangle:BoundingRectangle):Bool;
 
 	// 現在選択しているテキストフィールドのテキストに、startIndex 値と endIndex 値で指定される値を設定します。
 	public function setTextSelection(startIndex:Int, endIndex:Int):Bool;
@@ -552,4 +553,11 @@ extern class Document {
 	// オーサリング時にステージのズーム率を指定します。
 	public var zoomFactor(default, default):Float;
 
+}
+
+typedef BoundingRectangle = {
+	var left:Float;
+	var top:Float;
+	var right:Float;
+	var bottom:Float;
 }

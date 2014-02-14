@@ -118,7 +118,7 @@ extern class Timeline {
 	public function setGuidelines(xmlString:String):Bool;
 	
 	// すべての選択したレイヤー上の指定したプロパティを指定した値に設定します。
-	public function setLayerProperty(property:String, value:String, layersToChange:String):Void;
+	public function setLayerProperty(property:String, value:Dynamic, ?layersToChange:String = "selected"):Void;
 	
 	// カレントレイヤー内のフレームの範囲を選択するか、選択フレームをこのメソッドに渡された選択配列に設定します。
 	public function setSelectedFrames(startFrameIndex:Int, endFrameIndex:Int, ?bReplaceCurrentSelection:Bool = true, ?selectionList:Array<Int> = null):Void;
