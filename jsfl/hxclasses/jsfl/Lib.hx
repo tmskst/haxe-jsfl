@@ -16,6 +16,10 @@ class Lib {
 	
 	public static var fl:Flash = untyped __js__("fl");
 	
+	public static function trace(v:Dynamic, ?posInfos:haxe.PosInfos):Void {
+		fl.trace('${posInfos.fileName}:${posInfos.lineNumber}: ${v}');
+	}
+	
 	public static function throwError(object:Dynamic, ?posInfos:haxe.PosInfos):Void {
 		fl.trace('Error : ${object} at ${posInfos.methodName}[${posInfos.fileName}:${posInfos.lineNumber}]');
 		throw object;
