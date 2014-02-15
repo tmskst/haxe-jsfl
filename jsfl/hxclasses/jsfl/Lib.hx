@@ -14,4 +14,11 @@ class Lib {
 		return untyped __js__("prompt")(promptMsg, text);
 	}
 	
+	public static var fl:Flash = untyped __js__("fl");
+	
+	public static function throwError(object:Dynamic, ?posInfos:haxe.PosInfos):Void {
+		fl.trace('Error : ${object} at ${posInfos.methodName}[${posInfos.fileName}:${posInfos.lineNumber}]');
+		throw object;
+	}
+	
 }
