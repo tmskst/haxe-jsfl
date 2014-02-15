@@ -21,28 +21,23 @@ HXMLの例です。
 
 ### flの取得
 
-untypedを利用します。
-
-    var flash:jsfl.Flash = untyped fl;
+	import jsfl.Lib.fl;
+	fl.trace("Hello World");
 
 
 ### traceする
 
-jsfl.Flash#trace() を使用します。
-標準のtraceでは実行時にエラーになります。
-
-	var flash:Flash = untyped fl;
-	flash.trace("HelloWorld");
-
-
-
+	haxe.Log.trace = jsfl.Lib.trace;
+	trace("Hello World"); // Main.hx:10: Hello World
 
 ## 例
 
 ### ライブラリ項目を走査して項目名を出力する
 
-	var flash:Flash = untyped fl;
-	var items:Array<Item> = flash.getDocumentDOM().library.items;
-	for (item in items) {
-		flash.trace(item.name);
+	import jsfl.Lib.fl;
+	haxe.Log.trace = Lib.trace;
+	var items:Array<Item> = fl.getDocumentDOM().library.items;
+		for (item in items) {
+			trace(item.name);
+		}
 	}
