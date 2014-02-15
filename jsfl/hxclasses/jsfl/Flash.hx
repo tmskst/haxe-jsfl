@@ -4,7 +4,7 @@ package jsfl;
 extern class Flash {
 
 	// 特定のイベントを受け取ったときに呼び出す関数を登録します。
-	public function addEventListener(eventType:String, callbackFunction:Dynamic):Int;
+	public function addEventListener(eventType:EventType, callbackFunction:Dynamic):Int;
 
 	// ファイルを開くまたはファイルを保存システムダイアログボックスを開き、ユーザーは開いたり保存したりするファイルを指定できます。
 	public function browseForFileURL(browseType:String, ?title:String = null, ?fileDescription:String = null, ?fileFilter:Array<String> = null):String;
@@ -88,7 +88,7 @@ extern class Flash {
 	public function reloadTools():Void;
 
 	// fl.addEventListener() を使用して登録した関数を登録解除します。
-	public function removeEventListener(eventType:String, id:Int):Bool;
+	public function removeEventListener(eventType:EventType, id:Int):Bool;
 
 	// ActionScript 3.0 設定ダイアログボックスのグローバルクラスパスの設定をデフォルト値にリセットします。
 	public function resetAS3PackagePaths():Void;
