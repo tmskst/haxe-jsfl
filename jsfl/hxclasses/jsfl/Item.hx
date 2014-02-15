@@ -21,7 +21,7 @@ extern class Item {
 	public function setPublishData(name:String, format:String, publish:Bool):Void;
 	
 	// 読み取り専用。エレメントのタイプを指定するストリングです。
-	public var itemType(default, null):String;
+	public var itemType(default, null):ItemType;
 	
 	// シンボルに関連付けられる ActionScript 3.0 クラスを指定するストリング。
 	public var linkageBaseClass(default, default):String;
