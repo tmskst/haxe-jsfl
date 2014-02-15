@@ -37,7 +37,7 @@ extern class SymbolItem extends Item {
 	public var sourceLibraryName(default, default):String;
 	
 	// シンボルの種類を指定するストリング。
-	public var symbolType(default, default):String;
+	public var symbolType(default, default):SymbolType;
 	
 	// 読み取り専用。Timeline オブジェクトです。
 	public var timeline(default, null):Timeline;
