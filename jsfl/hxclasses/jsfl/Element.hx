@@ -19,7 +19,7 @@ extern class Element {
 	public function removePersistentData(name:String):Bool;
 
 	// エレメントとともにデータを格納します。
-	public function setPersistentData(name:String, type:String, value:Dynamic):Void;
+	public function setPersistentData(name:String, type:PersistentDataType, value:Dynamic):Void;
 
 	// 指定の形式に関して永続データのパブリッシュを有効または無効にします。
 	public function setPublishPersistentData(name:String, format:String, publish:Bool):Void;

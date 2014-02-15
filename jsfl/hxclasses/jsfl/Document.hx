@@ -4,10 +4,10 @@ package jsfl;
 extern class Document {
 	
 	// 指定したデータを、ドキュメントとともに保存します。
-	public function addDataToDocument(name:String, type:String, data:Dynamic):Void;
+	public function addDataToDocument(name:String, type:PersistentDataType, data:Dynamic):Void;
 
 	// 指定したデータを、選択したオブジェクトとともに保存します。
-	public function addDataToSelection(name:String, type:String, data:Dynamic):Void;
+	public function addDataToSelection(name:String, type:PersistentDataType, data:Dynamic):Void;
 
 	// 選択したオブジェクトにフィルターを適用します。
 	public function addFilter(filterName:String):Void;

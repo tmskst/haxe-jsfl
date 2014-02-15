@@ -3,7 +3,7 @@ package jsfl;
 @:native("Item")
 extern class Item {
 	// 指定されたデータをライブラリアイテムに追加します。
-	public function addData(name:String, type:String, data:Dynamic):Void;
+	public function addData(name:String, type:PersistentDataType, data:Dynamic):Void;
 	
 	// 指定したデータの値を取得します。
 	public function getData(name:String):Dynamic;
