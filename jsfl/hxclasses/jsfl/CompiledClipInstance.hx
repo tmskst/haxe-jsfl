@@ -37,7 +37,7 @@ extern class CompiledClipInstance extends Instance {
 	public var colorGreenPercent(default, default):Int;
 	
 	// シンボルプロパティダイアログの設定に従ってカラーモードを指定するストリング。
-	public var colorMode(default, default):String;
+	public var colorMode(default, default):ColorMode;
 	
 	// 赤の濃淡値を一定量ずつ増減させる整数。
 	public var colorRedAmount(default, default):Int;

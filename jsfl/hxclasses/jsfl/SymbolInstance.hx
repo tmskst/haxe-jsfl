@@ -43,7 +43,7 @@ extern class SymbolInstance extends Instance {
 	public var colorGreenPercent(default, default):Int;
 	
 	// シンボルのプロパティインスペクターのカラーポップアップメニューで示されるカラーモードを指定するストリング。
-	public var colorMode(default, default):String;
+	public var colorMode(default, default):ColorMode;
 	
 	// インスタンスのカラー変換の一部を指定する整数。これは、インスタンスのプロパティインスペクターで「カラー」の「詳細」を選択し、「設定」をクリックして表示するダイアログボックスを使用するのと等価です。
 	public var colorRedAmount(default, default):Int;
