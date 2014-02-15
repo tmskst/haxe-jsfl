@@ -10,7 +10,7 @@ extern class BitmapItem extends Item {
 	public var allowSmoothing(default, default):Bool;
 	
 	// ビットマップに適用する画像圧縮の種類を指定するストリング。
-	public var compressionType(default, default):String;
+	public var compressionType(default, default):CompressionType;
 	
 	// 1970 年 1 月 1 日から元のファイルの変更日付までに経過した秒数。
 	public var fileLastModifiedDate(default, null):String;
@@ -25,7 +25,7 @@ extern class BitmapItem extends Item {
 	public var lastModifiedDate(default, null):String;
 	
 	// アイテムが jpeg ファイルとして読み込まれたかどうかを指定します。
-	public var originalCompressionType(default, null):String;
+	public var originalCompressionType(default, null):CompressionType;
 	
 	// ライブラリに読み込まれたファイルが読み込み元の場所にまだ存在するかどうかを指定します。
 	public var sourceFileExists(default, null):Bool;
