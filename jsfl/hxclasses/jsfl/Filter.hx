@@ -42,7 +42,7 @@ extern class Filter {
 	public var knockout(default, default):Bool;
 	
 	// 読み取り専用。フィルターのタイプを指定するストリング。
-	public var name(default, null):String;
+	public var name(default, null):FilterType;
 	
 	// ぼかしの品質を指定するストリング。
 	public var quality(default, default):String;

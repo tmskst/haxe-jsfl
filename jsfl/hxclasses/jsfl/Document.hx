@@ -10,7 +10,7 @@ extern class Document {
 	public function addDataToSelection(name:String, type:PersistentDataType, data:Dynamic):Void;
 
 	// 選択したオブジェクトにフィルターを適用します。
-	public function addFilter(filterName:String):Void;
+	public function addFilter(filterName:FilterType):Void;
 
 	// 開いているドキュメントまたはライブラリから、指定したDocument オブジェクトにアイテムを追加します。
 	public function addItem(position: { x:Int, y:Int }, item:Item):Bool;
