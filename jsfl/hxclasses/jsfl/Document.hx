@@ -142,7 +142,7 @@ extern class Document {
 	public function enableFilter(filterIndex:Int):Void;
 
 	// オーサリングツールを、パラメーターで指定した編集モードに切り替えます。
-	public function enterEditMode(editMode:String):Void;
+	public function enterEditMode(editMode:DocumentEnterEditMode):Void;
 
 	// シンボル編集モードを終了し、編集モードから次の上位レベルにフォーカスを戻します。
 	public function exitEditMode():Void;

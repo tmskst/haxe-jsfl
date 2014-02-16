@@ -15,7 +15,8 @@ class Lib {
 	}
 	
 	public static var fl:Flash = untyped __js__("fl");
-	
+	public static var flfile:FLfile = untyped __js__("FLfile");
+
 	public static function trace(v:Dynamic, ?posInfos:haxe.PosInfos):Void {
 		fl.trace('${posInfos.fileName}:${posInfos.lineNumber}: ${v}');
 	}
