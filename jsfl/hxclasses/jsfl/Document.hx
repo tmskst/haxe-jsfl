@@ -43,7 +43,7 @@ extern class Document {
 	public function align(alignmode:AlignMode):Void;
 
 	// ステージで選択したオブジェクトを並べ替えます。
-	public function arrange(arrangeMode:String):Void;
+	public function arrange(arrangeMode:ArrangeMode):Void;
 
 	// 現在選択しているオブジェクトで分解処理を実行します。
 	public function breakApart():Void;
