@@ -40,7 +40,7 @@ extern class Document {
 	public function addNewText(boundingRectangle:BoundingRectangle, text:String):Void;
 
 	// 選択したオブジェクトを整列します。
-	public function align(alignmode:String):Void;
+	public function align(alignmode:AlignMode):Void;
 
 	// ステージで選択したオブジェクトを並べ替えます。
 	public function arrange(arrangeMode:String):Void;
