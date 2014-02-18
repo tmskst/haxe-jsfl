@@ -22,6 +22,6 @@ extern class VideoItem extends Item {
 	public var sourceFilePath(default, null):String;
 
 	// 読み取り専用。アイテムが表すビデオの種類を指定するストリングです。
-	public var videoType(default, null):String;
+	public var videoType(default, null):VideoType;
 
 }
