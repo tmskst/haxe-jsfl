@@ -31,7 +31,7 @@ extern class Element {
 	public var depth(default, null):Int;
 
 	// 読み取り専用。指定したエレメントの種類を表すストリングです。
-	public var elementType(default, null):String;
+	public var elementType(default, null):ElementType;
 
 	// エレメントの高さをピクセル単位で指定する浮動小数値です。
 	public var height(default, default):Float;

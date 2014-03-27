@@ -18,7 +18,7 @@ extern class Layer {
 	public var height(default, default):Int;
 	
 	// レイヤーの現在の使用方法を示すストリング。レイヤープロパティダイアログボックスの「タイプ」の設定と同じです。
-	public var layerType(default, default):Int;
+	public var layerType(default, default):LayerType;
 	
 	// レイヤーのロックステータスを示すブール値。
 	public var locked(default, default):Bool;
