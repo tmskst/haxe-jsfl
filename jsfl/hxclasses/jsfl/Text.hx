@@ -1,6 +1,5 @@
 package jsfl;
 
-@:native("Text")
 extern class Text extends Element {
 
 	// オプションの startIndex および endIndex パラメーターで識別されるテキストの指定した属性を取得します。
@@ -88,7 +87,7 @@ extern class Text extends Element {
 	public var textRuns(default, default):Array<TextRun>;
 	
 	// テキストフィールドの種類を指定するストリング。 有効な値は、「static」、「dynamic」および「input」です。
-	public var textType(default, default):String;
+	public var textType(default, default):TextType;
 	
 	// ブール値です。 値が true の場合、デバイスフォントを使用してテキストが描画されます。
 	public var useDeviceFonts(default, default):Bool;
@@ -96,4 +95,10 @@ extern class Text extends Element {
 	// Text オブジェクトの内容を含むストリング。
 	public var variableName(default, default):String;
 	
+}
+
+@:enum abstract TextType(String) {
+	var STATIC = "static";
+	var DYNAMIC = "dynamic";
+	var INPUT = "input";
 }
