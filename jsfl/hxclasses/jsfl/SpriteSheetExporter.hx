@@ -2,12 +2,14 @@ package jsfl;
 
 @:native("SpriteSheetExporter")
 extern class SpriteSheetExporter extends Item {
+	
+	public function new();
 
 	// ビットマップまたは bitmapItem をスプライトシートに追加します。
 	public function addBitmap(bitmap:BitmapItem):Void;
 	
 	// スプライトシートの生成に使用されるシンボルを追加します。
-	public function addSymbol(symbol:SymbolItem, name:String, beginFrame:Int, endFrame:Int):Bool;
+	public function addSymbol(symbol:SymbolItem, ?name:String, ?beginFrame:Int, ?endFrame:Int):Bool;
 	
 	// スプライトシートを新規作成する場合に SpriteSheetExporter を初期化します。
 	public function beginExport():Void;
@@ -16,7 +18,7 @@ extern class SpriteSheetExporter extends Item {
 	public function changeSymbol(symbol:SymbolItem, ?beginFrame:Null<Int> = null, ?endFrame:Null<Int> = null):Bool;
 	
 	// スプライトシートをイメージファイルに書き出します。
-	public function exportSpriteSheet(path:String, imageFormat:String, writeMetaData:Bool):String;
+	public function exportSpriteSheet(path:String, imageFormat:Dynamic, ?writeMetaData:Bool = true):String;
 	
 	// ビットマップオブジェクトをスプライトシートから削除します。
 	public function removeBitmap(bitmap:BitmapInstance):Void;
@@ -25,7 +27,7 @@ extern class SpriteSheetExporter extends Item {
 	public function removeSymbol(symbol:SymbolItem):Bool;
 	
 	// スプライトシートにエンコーディングアルゴリズムを設定します。
-	public var algorithm(default, default):String;
+	public var algorithm(default, default):SpriteSheetExporterAlgorithm;
 	
 	// スプライトシートへ追加する際に、スプライトを回転します。
 	public var allowRotate(default, default):Bool;
@@ -58,13 +60,13 @@ extern class SpriteSheetExporter extends Item {
 	public var canTrim(default, null):Bool;
 	
 	// スプライトシートのイメージファイルのフォーマット。
-	public var format(default, null):String;
+	public var format(default, null):SpriteSheetExporterFormat;
 	
 	// スプライトシートのイメージファイルの名前。
 	public var image(default, null):String;
 	
 	// スプライトシートのメタデータのフォーマット。
-	public var layoutFormat(default, default):String;
+	public var layoutFormat(default, default):SpriteSheetExporterLayoutFormat;
 	
 	// autoSize = true の場合、生成されるスプライトシートの高さの最大値が制御され、最大値 8192 で切り取られます。
 	public var maxSheetHeight(default, default):Int;
@@ -90,4 +92,26 @@ extern class SpriteSheetExporter extends Item {
 	// スプライトシートを作成するアプリケーションのバージョン番号。
 	public var version(default, null):String;
 
+}
+
+@:enum abstract SpriteSheetExporterAlgorithm(String) {
+	var BASIC = "basic";
+	var MAX_RECTS = "maxRects";
+}
+
+@:enum abstract SpriteSheetExporterFormat(String) {
+	var RGBA8888 = "RGBA8888";
+	var RGB888x = "RGB888x";
+	var RGB8 = "RGB8";
+}
+
+@:enum abstract SpriteSheetExporterLayoutFormat(String) {
+	var COCOS2D_V2 = "cocos2dv2";
+	var COCOS2D_V3 = "cocos2dv3";
+	var EASEL_JS = "easeljs";
+	var JSON = "JSON";
+	var JSON_ARRAY = "JSON-Array";
+	var SPARROW_V1 = "Sparrow-v1";
+	var SPARROW_V2 = "Sparrow-v2";
+	var STARLING = "Starling";
 }
