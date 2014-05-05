@@ -13,14 +13,16 @@ extern class SpriteSheetExporter extends Item {
 	// 第二引数'name'について、
 	// 第一引数'symbol'の型が SymbolItemのとき、引数'name'は不要です（指定できません）。
 	// 第一引数'symbol'の型が SymbolInstanceのとき、引数'name'は必要です（インスタンスの名前を指定しなければなりません）。
-	public function addSymbol(symbol:Dynamic, ?name:String, ?beginFrame:Int, ?endFrame:Int):Bool;
+	@:overload(function (symbol:SymbolInstance, name:String, ?beginFrame:Int, ?endFrame:Int):Bool {})
+	public function addSymbol(symbol:SymbolItem):Bool;
 	
 	// スプライトシートを新規作成する場合に SpriteSheetExporter を初期化します。
 	public function beginExport():Void;
 	
 	// スプライトシートに追加されるシンボルフレームを変更します。
 	// 第一引数'symbol'の型は、SymbolItem または SymbolInstance です。
-	public function changeSymbol(symbol:Dynamic, ?beginFrame:Null<Int> = null, ?endFrame:Null<Int> = null):Bool;
+	@:overload(function (symbol:SymbolInstance, ?beginFrame:Int, ?endFrame:Int):Bool {})
+	public function changeSymbol(symbol:SymbolItem, ?beginFrame:Int, ?endFrame:Int):Bool;
 	
 	// スプライトシートをイメージファイルに書き出します。
 	public function exportSpriteSheet(path:String, imageFormat:Dynamic, ?writeMetaData:Bool = true):String;
@@ -30,7 +32,8 @@ extern class SpriteSheetExporter extends Item {
 	
 	// シンボルをスプライトシートから削除します。
 	// 第一引数'symbol'の型は、SymbolItem または SymbolInstance です。
-	public function removeSymbol(symbol:Dynamic):Bool;
+	@:overload(function (symbol:SymbolInstance):Bool {})
+	public function removeSymbol(symbol:SymbolItem):Bool;
 	
 	// スプライトシートにエンコーディングアルゴリズムを設定します。
 	public var algorithm(default, default):SpriteSheetExporterAlgorithm;
