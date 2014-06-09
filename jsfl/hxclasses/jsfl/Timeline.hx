@@ -58,7 +58,7 @@ extern class Timeline {
 	public function findLayerIndex(name:String):Array<Int>;
 	
 	// 指定されたフレームに対する、Timeline のすべてのレイヤー上のすべてのエレメントの境界の矩形を返します。
-	public function getBounds(?frame:Int = 1, ?includeHiddenLayers:Bool = true):Rectangle;
+	public function getBounds(?frame:Int = 1, ?includeHiddenLayers:Bool = true):BoundingRectangle;
 	
 	// 選択したフレームの指定したプロパティの値を取得します。
 	public function getFrameProperty(property:String, ?startFrameIndex:Null<Int> = null, ?endFrameIndex:Null<Int> = null):Dynamic;
