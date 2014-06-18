@@ -9,35 +9,50 @@ JSFLのextern定義です。
 
 ### 準備
 
-jsfl/hxclassesをクラスパスに追加します。
+`haxelib git`を使ってインストールします。
+
+```
+$ haxelib git haxe-jsfl git://github.com/tmskst/haxe-jsfl.git master /jsfl/hxclasses
+```
 
 HXMLの例です。
 
-	-cp src
-	-cp jsfl/hxclasses
-	-main Main
-	-js bin/foobar.jsfl
-
+```
+-lib haxe-jsfl
+-cp src
+-main Main
+-js bin/Main.jsfl
+```
 
 ### flの取得
 
-	import jsfl.Lib.fl;
-	fl.trace("Hello World");
-
+```js
+import jsfl.Lib.fl;
+var document:Document = fl.getDocumentDOM();
+```
 
 ### traceする
 
-	haxe.Log.trace = jsfl.Lib.trace;
-	trace("Hello World"); // Main.hx:10: Hello World
+ライブラリとしてリンク(`-lib haxe-jsfl`)すると`trace`が自動的に使えるようになります。
+
+```js
+trace("Hello World"); // Main.hx:10: Hello World
+```
 
 ## 例
 
 ### ライブラリ項目を走査して項目名を出力する
 
-	import jsfl.Lib.fl;
-	haxe.Log.trace = Lib.trace;
-	var items:Array<Item> = fl.getDocumentDOM().library.items;
+```haxe
+import jsfl.Item;
+import jsfl.Lib.fl;
+ 
+class Main {
+	public static function main() {
+		var items:Array<Item> = fl.getDocumentDOM().library.items;
 		for (item in items) {
 			trace(item.name);
 		}
 	}
+}
+```
