@@ -1,0 +1,10 @@
+{
+	"name": "haxe-jsfl",
+	"url" : "https://github.com/tmskst/haxe-jsfl",
+	"license": "MIT",
+	"tags": ["jsfl"],
+	"description": "extern for JSFL(Flash JavaScript)",
+	"version": "0.0.1",
+	"contributors": ["tmskst"],
+	"dependencies": { }
+}

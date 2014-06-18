@@ -1,4 +1,4 @@
 bin/
 src/
-*.hxproj
-*.hxml
+haxe-jsfl.hxproj
+build.hxml

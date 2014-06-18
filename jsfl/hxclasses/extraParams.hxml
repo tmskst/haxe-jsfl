@@ -1,0 +1,2 @@
+--macro haxe.macro.Compiler.keep("jsfl.Boot")
+--macro haxe.macro.Compiler.exclude("js")
