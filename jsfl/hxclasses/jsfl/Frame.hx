@@ -125,5 +125,7 @@ extern class Frame {
 	
 	// 単一カスタムイージング曲線をすべてのプロパティのイージング情報に使用するかどうかを指定するブール値。
 	public var useSingleEaseCurve(default, default):Bool;
+	
+	public var tweenObj(default, null):Tween;
 
 }
