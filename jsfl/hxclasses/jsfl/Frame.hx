@@ -121,7 +121,7 @@ extern class Frame {
 	public var tweenInstanceName(default, default):String;
 	
 	// トゥイーンの種類を指定するストリング。
-	public var tweenType(default, default):String;
+	public var tweenType(default, default):TweenType;
 	
 	// 単一カスタムイージング曲線をすべてのプロパティのイージング情報に使用するかどうかを指定するブール値。
 	public var useSingleEaseCurve(default, default):Bool;

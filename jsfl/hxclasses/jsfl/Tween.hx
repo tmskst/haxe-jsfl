@@ -22,6 +22,6 @@ extern class Tween {
 	public var startFrame(default, default):Int;
 	
 	// トゥイーンのタイプを指定します。例：モーションやシェイプなど。
-	public var tweenType(default, default):String;
+	public var tweenType(default, default):TweenType;
 	
 }
