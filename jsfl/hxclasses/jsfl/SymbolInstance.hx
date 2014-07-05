@@ -76,7 +76,7 @@ extern class SymbolInstance extends Instance {
 	public var silent(default, default):Bool;
 	
 	// シンボルの種類を指定するストリング。これは、新規シンボルの作成ダイアログボックスおよびシンボルに変換ダイアログボックスの「ビヘイビアー」の値と等価です。
-	public var symbolType(default, default):String;
+	public var symbolType(default, default):SymbolType;
 	
 	// アクセシビリティパネルの「タブインデックス」フィールドと等価の整数。
 	public var tabIndex(default, default):Int;
