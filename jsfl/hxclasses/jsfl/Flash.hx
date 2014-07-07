@@ -184,7 +184,7 @@ extern class Flash {
 	public var libraryPath(default, default):String;
 
 	// 読み取り専用。マトリックスとポイントの操作に関するメソッドを提供する Math オブジェクトです。
-	public var Math(default, null):Math;
+	public var Math(default, null):JsflMath;
 
 	// 読み取り専用。Flash オーサリングツールで管理する最後に使用したリスト（MRU リスト）にある完全なファイル名の配列です。
 	public var mruRecentFileList(default, null):Array<String>;

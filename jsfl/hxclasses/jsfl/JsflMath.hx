@@ -1,6 +1,5 @@
 package jsfl;
 
-@:native("Math")
 extern class JsflMath {
 
 	// マトリックスの連結を実行し、結果を返します。
