@@ -67,7 +67,7 @@ extern class SymbolInstance extends Instance {
 	public var is3D(default, null):Bool;
 	
 	// グラフィックシンボルの場合に、プロパティインスペクターのループポップアップメニューと同じプロパティを設定するストリング。
-	public var loop(default, default):String;
+	public var loop(default, default):LoopType;
 	
 	// シンボルに割り当てられているショートカットキーと等価のストリング。これは、アクセシビリティパネルの「ショートカット」フィールドと等価です。
 	public var shortcut(default, default):String;
@@ -93,4 +93,10 @@ extern class SymbolInstance extends Instance {
 	// インスタンスが表示か非表示かを指定するブール値。
 	public var visible(default, default):Bool;
 
+}
+
+@:enum abstract LoopType(String) {
+	var LOOP = "loop";
+	var PLAY_ONCE = "play once";
+	var SINGLE_FRAME = "single frame";
 }
