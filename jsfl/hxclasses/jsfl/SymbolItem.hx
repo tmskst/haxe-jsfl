@@ -16,7 +16,7 @@ extern class SymbolItem extends Item {
 	public function exportToLibrary(frameNumber:Int, bitmapName:String):Void;
 	
 	// シンボルを PNG シーケンスファイルとして書き出します。
-	public function exportToPNGSequence(outputURI:String, startFrameNum:Int, endFrameNum:Int, ?matrix:Matrix = null):Void;
+	public function exportToPNGSequence(outputURI:String, ?startFrameNum:Int, ?endFrameNum:Int, ?matrix:Matrix = null):Void;
 	
 	// シンボルが変更された日付を表す 16 進数値のストリング。
 	public var lastModifiedDate(default, null):String;
