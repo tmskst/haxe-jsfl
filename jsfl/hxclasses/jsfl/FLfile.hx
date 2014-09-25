@@ -50,5 +50,7 @@ extern class FLfile {
 	
 	// ファイルの作成、ファイルへの書き込みまたは追加を行います。
 	public static function write(fileURI:String, textToWrite:String, ?strAppendMode:String = null):Bool;
+	
+	public static function runCommandLine(command:String):Void;
 
 }
