@@ -12,7 +12,7 @@ JSFLのextern定義です。
 `haxelib git`を使ってインストールします。
 
 ```
-$ haxelib git haxe-jsfl git://github.com/tmskst/haxe-jsfl.git master /jsfl/hxclasses
+$ haxelib git haxe-jsfl git://github.com/tmskst/haxe-jsfl.git
 ```
 
 HXMLの例です。
