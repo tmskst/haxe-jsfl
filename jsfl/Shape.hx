@@ -16,10 +16,10 @@ extern class Shape extends Element {
 	public function endEdit():Void;
 	
 	// 読み取り専用。シェイプの Contour オブジェクトの配列です（Contour オブジェクトを参照）。
-	public var contours(default, null):Contour;
+	public var contours(default, null):Array<Contour>;
 	
 	// 読み取り専用。Edge オブジェクトの配列です（Edge オブジェクトを参照）。
-	public var edges(default, null):Edge;
+	public var edges(default, null):Array<Edge>;
 	
 	// 読み取り専用。true の場合、シェイプは描画オブジェクトです。
 	public var isDrawingObject(default, null):Bool;
