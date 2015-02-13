@@ -19,7 +19,7 @@ extern class Parameter {
 	public var name(default, null):String;
 	
 	// コンポーネントインスペクターの「パラメーター」タブの「値」フィールド、プロパティインスペクターの「パラメーター」タブの「値」フィールド、またはスクリーンのプロパティインスペクターの「値」フィールドに対応します。
-	public var value(default, default):String;
+	public var value(default, default):Dynamic;
 	
 	// 読み取り専用。スクリーンまたはコンポーネントのパラメーターの型を示すストリングです。
 	public var valueType(default, null):String;
