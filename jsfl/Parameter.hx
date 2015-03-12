@@ -22,7 +22,7 @@ extern class Parameter {
 	public var value(default, default):Dynamic;
 	
 	// 読み取り専用。スクリーンまたはコンポーネントのパラメーターの型を示すストリングです。
-	public var valueType(default, null):String;
+	public var valueType(default, null):ParameterType;
 	
 	// パラメーターを表示する場所を指定します。	
 	public var verbose(default, default):String;
