@@ -6,8 +6,20 @@ package jsfl;
 
 @:fakeEnum(String)
 extern enum ParameterType {
-	
+	DEFAULT;
+	ARRAY;
+	OBJECT;
+	LIST;
+	STRING;
+	NUMBER;
+	BOOLEAN;
+	FONT_NAME;
+	COLOR;
+	COLLECTION;
+	WEB_SERVICE_URL;
+	WEB_SERVICE_OPERATION;
 }
+
 @:native("jsfl.ParameterType")
 private class Impl {
 	public static inline var DEFAULT:String = "Default";
