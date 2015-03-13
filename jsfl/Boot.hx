@@ -9,6 +9,10 @@ class Boot {
 	}
 	
 	private static function trace(v:Dynamic, ?infos:PosInfos):Void {
+		#if debug
 		untyped __js__("fl").trace('${infos.fileName}:${infos.lineNumber}: ${v}');
+		#else
+		untyped __js__("fl").trace('${v}');
+		#end
 	}
 }
