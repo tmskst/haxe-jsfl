@@ -1,7 +1,7 @@
 package jsfl;
 
 @:native("Matrix")
-extern class Matrix {
+extern typedef Matrix = {
 	
 	// 変換マトリックス内の (0,0) エレメントを指定する浮動小数点値。
 	public var a(default, default):Float;
