@@ -7,7 +7,7 @@ extern class Timeline {
 	public function addMotionGuide():Int;
 	
 	// 新しいレイヤーをドキュメントに追加し、そのレイヤーをカレントレイヤーにします。
-	public function addNewLayer(name:String, layerType:String, ?bAddAbove:Bool = true):Int;
+	public function addNewLayer(name:String, layerType:LayerType, ?bAddAbove:Bool = true):Int;
 	
 	// カレントレイヤー上のフレームまたはフレームの範囲からすべての内容を削除します。
 	public function clearFrames(?startFrameIndex:Null<Int> = null, ?endFrameIndex:Null<Int> = null):Void;
