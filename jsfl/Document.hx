@@ -82,7 +82,7 @@ extern class Document {
 	public function convertSelectionToBitmap():Bool;
 
 	// 選択したステージアイテムを新規のシンボルに変換します。
-	public function convertToSymbol(type:SymbolType, name:String):Item;
+	public function convertToSymbol(type:SymbolType, name:String, registrationPoint:RegistrationPoint):Item;
 
 	// 選択した一番上の描画オブジェクトを使用して、選択した下位のすべての描画オブジェクトを切り抜きます。
 	public function crop():Void;
