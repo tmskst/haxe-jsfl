@@ -1,4 +1,4 @@
-package jsfl;
+package ;
 
 import haxe.Log;
 import haxe.PosInfos;
