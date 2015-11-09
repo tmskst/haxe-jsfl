@@ -1,11 +1,8 @@
 package jsfl;
 
-@:fakeEnum(String)
-extern enum PersistentReturnData {
-	NULL;
-}
+@:enum 
+abstract PersistentReturnData(String) {
 
-@:native("jsfl.PersistentReturnData")
-private class Impl {
-	public static inline var NULL:String = "0";
+	var NULL = "0";
+
 }
