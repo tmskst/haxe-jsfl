@@ -1,13 +1,9 @@
 package jsfl;
 
-@:fakeEnum(String)
-extern enum DocumentEnterEditMode {
-	IN_PLACE;
-	NEW_WINDOW;
-}
+@:enum 
+abstract DocumentEnterEditMode(String) {
 
-@:native("jsfl.DocumentEnterEditMode")
-private class Impl {
-	public static inline var IN_PLACE = "inPlace";
-	public static inline var NEW_WINDOW = "newWindow";
+	var IN_PLACE   = "inPlace";
+	var NEW_WINDOW = "newWindow";
+
 }
