@@ -79,7 +79,7 @@ extern class Timeline {
 	public function insertBlankKeyframe(frameNumIndex:Int):Void;
 	
 	// 指定した数のフレームを指定したフレーム番号に挿入します。
-	public function insertFrames(numFrames:Int, ?bAllLayers:Bool = false, ?frameNumIndex:Null<Int> = null):Void;
+	public function insertFrames(?numFrames:Int, ?bAllLayers:Bool = false, ?frameNumIndex:Null<Int> = null):Void;
 	
 	// 指定したフレームにキーフレームを挿入します。
 	public function insertKeyframe(frameNumIndex:Int):Void;
