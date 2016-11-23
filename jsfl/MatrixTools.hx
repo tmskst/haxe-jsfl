@@ -15,7 +15,7 @@ class MatrixTools {
 		return jsfl.Lib.fl.Math.invertMatrix(matrix);
 	}
 	
-	public function transformPoint(matrix:Matrix, point: { x:Float, y:Float } ): { x:Float, y:Float } {
+	public static function transformPoint(matrix:Matrix, point: { x:Float, y:Float } ): { x:Float, y:Float } {
 		return jsfl.Lib.fl.Math.transformPoint(matrix, point);
 	}
 	
