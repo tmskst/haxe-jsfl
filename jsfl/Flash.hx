@@ -1,5 +1,7 @@
 package jsfl;
 
+import haxe.extern.Rest;
+
 @:native("Flash")
 extern class Flash {
 
@@ -94,7 +96,7 @@ extern class Flash {
 	public function resetAS3PackagePaths():Void;
 
 	// JavaScript ファイルを実行します。
-	public function runScript(fileURI:String, funcName:String, ?arg1:Dynamic = null, ?arg2:Dynamic = null, ?arg3:Dynamic = null, ?arg4:Dynamic = null):String;
+	public function runScript(fileURI:String, funcName:String, args:Rest<Dynamic>):String;
 
 	// 開いているドキュメントをすべて保存し、1 回も保存されていないドキュメントに対しては名前を付けて保存ダイアログボックスを表示します。
 	public function saveAll():Void;
