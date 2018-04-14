@@ -223,7 +223,7 @@ extern class Flash {
 	public var spriteSheetExporter(default, default):SpriteSheetExporter;
 
 	// 登録された swfPanel オブジェクトの配列（swfPanel オブジェクトを参照）。
-	public var swfPanels(default, default):SwfPanel;
+	public var swfPanels(default, default):Array<SwfPanel>;
 
 	// 読み取り専用。Tools オブジェクトの配列です。
 	public var tools(default, null):Tools;
