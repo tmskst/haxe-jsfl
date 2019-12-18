@@ -187,7 +187,7 @@ extern class Document {
 	public function getElementProperty(propertyName:String):Element;
 
 	// 選択した Text オブジェクトの指定した TextAttrs プロパティを取得します。
-	public function getElementTextAttr(attrName:String, ?startIndex:Null<Int> = null, endIndex:Null<Int> = Null):Dynamic;
+	public function getElementTextAttr(attrName:String, ?startIndex:Null<Int> = null, endIndex:Null<Int> = null):Dynamic;
 
 	// 現在選択しているオブジェクトに適用されるフィルターのリストを含む配列を返します。
 	public function getFilters():Array<Filter>;
